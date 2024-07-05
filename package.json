@@ -1,0 +1,14 @@
+{
+  "name": "sanber-javascript-pt-1",
+  "version": "1.0.0",
+  "description": "belajar javascript sanbercode",
+  "main": "index.js",
+  "scripts": {
+    "test": "node file_name.js"
+  },
+  "author": "shafa",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
