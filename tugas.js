@@ -1,23 +1,14 @@
-const readline = require('readline');
+const prompt = require('prompt-sync')({ sigint: true });
+const input = prompt('Masukkan sebuah bilangan:');
+const x = parseFloat(input);
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-rl.question('Masukkan sebuah bilangan: ', (input) => {
-  let x = parseFloat(input);
-
-  if (isNaN(x)) {
+if(isNaN(x)){
     console.log('Input bukan bilangan yang valid');
-  } else if (x < 0) {
+}else if( x < 0){
     console.log('Tidak bisa input bilangan negatif');
-  } else if (x % 2 !== 0) {
+}else if(x % 2 !==0){
     console.log('Tidak bisa input bilangan ganjil');
-  } else {
-    let result = Math.sqrt(x);
-    console.log(`Akar pangkat dua dari ${x} adalah ${result}`);
-  }
-
-  rl.close();
-});
+}else{
+    const result = Math.sqrt(x);
+    console.log('akar pangkat dua dari' +x+ 'adalah' + result);
+}
